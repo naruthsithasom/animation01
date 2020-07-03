@@ -1,0 +1,39 @@
+#ID_DIV{
+  height:100px;
+  width:100px;
+
+  background-color: skyblue;
+  animation-name: example;
+  animation-duration: 10;
+  animation: example alternate ease-in 1s 2s 4;
+}
+ /* วิธีการใช้แบบ 1from {} to {}*/
+@keyframes example{
+ 
+  from {
+    background-color: skyblue;
+    height: 300px;
+    width:300px;
+    margin:auto;
+  }
+  to{
+    background-color: black;
+    margin: auto;
+  }
+} 
+/* วิธีการใช้แบบ2 %{}*/
+/* @keyframes example{
+ 
+   0% {
+    background-color:peachpuff;
+  }
+  25%{
+    background-color: red;
+  }
+  50%{
+    background-color: peachpuff;
+  }
+  100%{
+    background-color: darkblue;
+  } 
+} */
