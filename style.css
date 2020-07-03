@@ -1,24 +1,74 @@
-#ID_DIV{
-  height:100px;
-  width:100px;
 
-  background-color: skyblue;
-  animation-name: example;
+@font-face{
+ src:url("font/Galada-Regular.ttf");
+ font-family:Galada;
+}
+body{
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: Galada;
+  font-size: 20px;
+}
+.container{
+  display:grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto auto;
+}
+.box1{
+  display:flex;
+  justify-content: center;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.box2 > h1 {
+  position: absolute;
+  /* left: 50%;
+  top:50%;
+  transform: translateX(-50%); */
+  /* top:0;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+h1{
+  /* color:white; */
+  margin: 0;
+}
+#ID_animation1{
+  position: absolute;
+  /* left: 50%;
+  top:50%;
+  transform: translateX(-50%); */
+  left: 50%;
+  top:0;
+  transform: translateX(-50%); 
+  height:60px;
+  width:100%;
+ 
+
+  border: 1px solid greenyellow;
+  background-color: goldenrod;
+  animation-name: animeOne;
   animation-duration: 10;
-  animation: example alternate ease-in 1s 2s 4;
+  animation: animeOne alternate ease-in 4s 2s 2;
+
+  visibility: hidden;
 }
  /* วิธีการใช้แบบ 1from {} to {}*/
-@keyframes example{
- 
+@keyframes animeOne{
   from {
-    background-color: skyblue;
-    height: 300px;
-    width:300px;
-    margin:auto;
+    position: absolute;
+    bottom: 0;
+    background-color: blue;
+    height: 100px;
+    width:270px;
+    color: white;
+    visibility: visible;
   }
   to{
-    background-color: black;
-    margin: auto;
+    background-color: red;
+    color: yellow;
   }
 } 
 /* วิธีการใช้แบบ2 %{}*/
